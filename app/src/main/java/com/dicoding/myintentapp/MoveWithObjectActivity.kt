@@ -14,6 +14,7 @@ class MoveWithObjectActivity : AppCompatActivity() {
         setContentView(R.layout.activity_move_with_object)
 
         val tvObject: TextView = findViewById(R.id.tv_object_received)
+
         val person = if(Build.VERSION.SDK_INT >= 33){
             intent.getParcelableExtra<Person>(EXTRA_PERSON, Person::class.java)
         } else {
